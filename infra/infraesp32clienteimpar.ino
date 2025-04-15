@@ -1,4 +1,4 @@
-//Cliente-03
+//Cliente-01
 #include <WiFi.h>
 #include <DHT.h>
 
@@ -37,7 +37,7 @@ void loop() {
   int mq135Value = analogRead(mq135Pin);
 
   if (client.connect(serverIP, 80)) {
-    client.print("ID:Cliente03 T1:" + String(temperature) + " H1:" + String(humidity) +
+    client.print("ID:Cliente01 T1:" + String(temperature) + " H1:" + String(humidity) +
                  " MQ1:" + String(mq135Value) + " LDR1:" + String(ldrValue) + "\n");
     client.stop();
   }
