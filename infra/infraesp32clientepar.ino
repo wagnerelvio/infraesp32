@@ -37,7 +37,7 @@ void loop() {
   int mq135Value = analogRead(mq135Pin);
 
   if (client.connect(serverIP, 80)) {
-    client.print("ID:Cliente06 T2:" + String(temperature) + " H2:" + String(humidity) +
+    client.print("ID:Cliente02 T2:" + String(temperature) + " H2:" + String(humidity) +
                  " MQ2:" + String(mq135Value) + " LDR2:" + String(ldrValue) + "\n");
     client.stop();
   }
