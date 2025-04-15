@@ -35,7 +35,8 @@ void loop() {
   float temperature = dht.readTemperature();
   int ldrValue = analogRead(ldrPin);
   int mq135Value = analogRead(mq135Pin);
-
+  /*Alterar na Linha 41 o nome do Cliente01: Cliente01    Cliente03    Cliente05  e Cliente07  
+    */
   if (client.connect(serverIP, 80)) {
     client.print("ID:Cliente01 T1:" + String(temperature) + " H1:" + String(humidity) +
                  " MQ1:" + String(mq135Value) + " LDR1:" + String(ldrValue) + "\n");
